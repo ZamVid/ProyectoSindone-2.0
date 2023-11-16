@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="user-buttons">
+            <a href="subscribe.html" class="btn">Suscribirme</a>
+        </div>
+        <div class="user-buttons-container">
+            <a href="login.html" class="btn">Log In</a>
+        </div>
+        <img src="imagenes/face2.jpg" alt="rostro sindonico" id="rostro">
+        <h1>La Sindone de Turin</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Que es?</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="ciencia.html">Analisis cientifico</a></li>
+                <li><a href="autopsia.html">Autopsia</a></li>
+                <li><a href="entierro.html">Entierro</a></li>
+                <li><a href="reliquias.html">Otras reliquias y la Sindone</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>Comentarios, Elogios, Sugerencias, Consultas</h1>
+    </header>
+    <div class="ad-container">
+        <img src="imagenes\add1.jpg" alt="Anuncio 1" style="max-width: 100%; margin: 0 auto;">
+        <a href="http://www.blankwebsite.com/">
+            <h2>Apuesta en BetPulse!</h2>
+        </a>
+        <img src="imagenes\add2.jpg" alt="Anuncio 1" style="max-width: 80%; margin: 0 auto;">
+        <a href="http://www.blankwebsite.com/">
+            <h2>Visita HSYAH!</h2>
+        </a>
+        <img src="imagenes\add3.jpg" alt="Anuncio 1" style="max-width: 80%; margin: 0 auto;">
+        <a href="http://www.blankwebsite.com/">
+            <h2>Compra en SportsWorld!</h2>
+        </a>
+    </div>
+    <div class="contact-container">
+        <p>Indicanos como te podemos ayudar:</p>
+        <form class="centered-form" id="contactForm" onsubmit="return validarFormulario()">
+            <label for="nombre">*Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellidos">*Apellidos</label>
+            <input type="texr" id="apellidos" name="apellidos" required>
+            
+            <label for="email">*Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="comments">*A continuacion detallanos el motivo de tu eleccion</label>
+            <textarea id="comments" name="comments" rows="4" required></textarea>
+            <div class="button-container">
+                <button type="submit">Enviar</button>
+                <button type="button" class="cancel" onclick="resetForm()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <h3>Algunas ilustraciones son extraidas de libros sobre la Sindone de Turin, de parte del Centro Español de
+            Sindonologia</h3>
+        <h3>Tambien se ha ocupado para ilustrar esculturas y dibujos de Giulio Ricci, Juan Manuel Miñarro Lopez y
+            Lorenzo Ferri</h3>
+        <em>Copyright &copy; <time>2023</time> AreCodes</em>
+    </footer>
+</body>
+</html>
