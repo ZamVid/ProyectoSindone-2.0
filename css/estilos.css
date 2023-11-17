@@ -3,39 +3,49 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
+    font-size: 16px;
 }
+
 header {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
     padding: 20px 0;
 }
+
 section {
-    background-color: white; 
+    background-color: white;
     margin: 1em 6em 1em 6em;
     border: solid 1pt black;
 }
+
 h1 {
     font-size: 36px;
     color: #333;
     text-align: center;
 }
+
 nav {
     text-align: center;
     background-color: #333;
     padding: 10px 0;
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
 nav li {
-    display: inline;
+    display: inline-block;
     margin-right: 20px;
+    position: relative;
 }
+
 nav a:active {
     color: #ff9900;
 }
+
 nav a {
     text-decoration: none;
     color: #fff;
@@ -47,6 +57,7 @@ nav a {
 nav a:hover {
     color: #ff9900;
 }
+
 .container {
     max-width: 800px;
     margin: 20px auto;
@@ -54,15 +65,18 @@ nav a:hover {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 h2 {
     font-size: 24px;
     color: #333;
 }
+
 p {
     font-size: 16px;
     line-height: 1.5;
     color: #666;
 }
+
 img {
     border: 2px;
     max-width: 70%;
@@ -73,12 +87,14 @@ img {
     height: auto;
     margin-bottom: 15px;
 }
+
 .container h2 {
     background-color: #000000;
     color: #fff;
     padding: 10px;
     text-align: center;
 }
+
 footer {
     text-align: center;
     padding: 20px;
@@ -87,7 +103,7 @@ footer {
 }
 
 .user-buttons-container {
-  text-align: right;
+    text-align: right;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -100,11 +116,13 @@ footer {
     text-decoration: none;
     border: none;
 }
+
 .centered-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .centered-form label,
 .centered-form input[type="email"],
 .centered-form input[type="checkbox"],
@@ -116,17 +134,20 @@ footer {
 .checkbox-container {
     text-align: center;
 }
-#contenido{
+
+#contenido {
     max-height: 600px;
     overflow-y: auto;
-    
+
 }
-#rostro{
+
+#rostro {
     width: 150px;
     height: 210px;
     display: flex;
 }
-.ad-container{
+
+.ad-container {
     position: sticky;
     width: 300px;
     background-color: transparent;
@@ -135,6 +156,7 @@ footer {
     margin-right: 20px;
     float: right;
 }
+
 .contact-section {
     max-width: 600px;
     margin: 0 auto;
@@ -148,6 +170,20 @@ footer {
     font-size: 14px;
     margin: 5px 0;
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .ad-container {
+        width: 100%;
+        margin-right: 0;
+        float: none;
+    }
+}
+
 .login-container {
     max-width: 800px;
     margin: 20px auto;
@@ -155,6 +191,15 @@ footer {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.shop-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 button {
     background-color: #ff9900;
     color: #fff;
@@ -181,6 +226,14 @@ a {
 a:hover {
     color: #ff9900;
 }
+
+@media screen and (max-width: 768px) {
+    .login-container {
+        max-width: 100%;
+        margin: 10px;
+    }
+}
+
 .contact-container {
     max-width: 800px;
     margin: 20px auto;
@@ -188,6 +241,7 @@ a:hover {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 input {
     width: 250px;
     padding: 10px;
@@ -195,6 +249,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 textarea {
     width: 350px;
     padding: 10px;
@@ -202,6 +257,7 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 .slider-container {
     width: 80%;
     margin: 0 auto;
@@ -211,5 +267,62 @@ textarea {
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
+}
+
+.slide {
     min-width: 100%;
+}
+
+img.slider-img {
+    max-width: 100%;
+    height: auto;
+}
+
+input.cantidad {
+    margin: 10px auto;
+    display: block;
+}
+
+input.cantidad {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input.cantidad:hover {
+    border-color: #e68a00;
+}
+
+.seccion-lateral-fija {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 500px;
+    background-color: #e68a00;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del menú desplegable */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+nav li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    display: block;
+    margin: 0;
+
 }
